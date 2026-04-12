@@ -65,11 +65,17 @@
 
         <div class="write-up">
             <h3>White Hat Write-up</h3>
-            <p>This visualization utilizes the OECD Greenhouse Gas Emissions Inventories dataset, specifically tracking total emissions (excluding Land Use, Land-Use Change, and Forestry) measured in kilogrammes of CO2-equivalent per person. The analysis focuses on a ten-year window from 2014 to 2023. A per-capita metric was selected because it provides a more equitable comparison of a nation's carbon intensity relative to its population size, rather than simply measuring total mass, which is often biased toward larger countries.</p>
-            
-            <p>To ensure the visualization is read and understood effortlessly, the dataset was filtered to include only the G7 (Group of Seven) nations. This represents a transparent, non-arbitrary grouping of advanced economies, which avoids the confusion caused by including all 95 entities present in the raw data. A line chart was used as the most effective mark for showing temporal trends, with a manually assigned high-contrast color palette to ensure that geographically similar nations, such as Canada and the United States, are instantly distinguishable. Furthermore, a horizontal reference line was placed at the 100-index level to provide a vital visual anchor, allowing the reader to instantly see which nations have successfully lowered their emissions relative to the start of the decade.</p>
-            
-            <p>To meet the requirement for advanced transformations, a Base-Year Indexing calculation was applied: <strong>(Current Year Value / 2014 Value) * 100</strong>. By setting 2014 as the "100" baseline for every nation, the visualization focuses on the relative rate of change. This transformation is fundamentally more honest for a general audience; it prevents the sheer volume of larger economies from visually overwhelming the significant percentage reductions made by smaller nations, allowing for a direct comparison of how effectively each nation is reducing its carbon footprint over time. All titles and labels have been customized to describe and contextualize the visualization accurately, ensuring transparency for the viewer.</p>
+            <p>
+                This visualization utilizes the OECD Greenhouse Gas Emissions Inventories dataset, tracking total emissions (excluding Land Use) in kilograms of CO2-equivalent per person from 2014 to 2023. Per-capita data was selected for an equitable comparison of carbon intensity relative to population size, instead of total mass, which is often biased toward larger countries.
+                <br><br>
+                For effortless comprehension, the dataset was filtered to the G7 nations. This represents a transparent, non-arbitrary group of advanced economies, avoiding the confusion of including all 95 entities from the raw data. A line chart shows temporal trends, using a manually assigned high-contrast color palette to ensure geographic neighbors, like Canada and the United States, are instantly distinguishable. A horizontal reference line at the 100-index level provides a visual anchor to identify nations that successfully lowered emissions relative to the start of the decade.
+                <br><br>
+                To meet advanced transformation requirements, a Base-Year Indexing calculation was applied: (Current Year Value / 2014 Value) * 100. Setting 2014 as the "100" baseline focuses the visualization on the relative rate of change. This approach is more honest for general audiences; it prevents the volume of larger economies from visually overwhelming the significant reductions made by smaller nations, allowing a direct comparison of decarbonization progress. All titles and labels describe the visualization accurately, ensuring transparency.
+                <br><br>
+                The indexed trends reveal a clear divergence in G7 performance. The United Kingdom is the leader in per-capita reductions, with a consistent downward trajectory well below its baseline. This suggests effective decoupling of economic activity from emissions. In contrast, the United States and Italy show flatter trajectories. While making minor gains, their lines remain near the 100-index anchor, indicating slower decarbonization. This index demonstrates that while the UK substantially shrunk its footprint, progress in the US and Italy has remained relatively stagnant by comparison.
+                <br><br>
+                Regarding generative AI, Gemini served as a collaborative design partner, assisting in identifying transparent methods for subsetting data and suggesting the G7 as a logical peer group. It also provided technical guidance on the Tableau indexing formula and helped refine the write-up's structure to ensure it addressed all rubric criteria, such as data transformation and ethical design transparency.
+            </p>
         </div>
     </div>
 
@@ -87,13 +93,18 @@
     <hr>
 
     <div class="dev-process">
-        <h3>AI Usage and Development Process</h3>
-        <p><strong>AI Usage:</strong> Gemini was used as a collaborative design partner to brainstorm ethical visualization strategies, select the G7 peer-group for clarity, and refine the indexing formula for mathematical accuracy.</p>
-        <p><strong>Development Process:</strong> I (John Li) was responsible for the White Hat visualization, including data selection, Tableau implementation, and the ethical justification write-up. My partner is developing the Black Hat version. Approximately 5–6 hours were spent on the White Hat portion. The most significant challenge was balancing the dataset scope to avoid "spaghetti plots" while maintaining a fair, peer-based comparison.</p>
+        <h3>Development Process</h3>
+        <p><strong>Development Process:</strong> <br>
+            - John: Served as the White Hat lead, handling the data collection, cleaning, and main Tableau setup. Spent about 5.5 hours on the project, specifically focusing on filtering the large OECD dataset down to the G7 countries to avoid a messy "spaghetti plot." Set up the calculated fields for the 2014 base-year indexing to show how emissions changed relative to each other over time. Spent the most time testing different country filters and troubleshooting the indexing math in the Tableau web editor to ensure the final chart was easy to read and accurate.
+            <br><br>
+            - Jiho: 
+        </p>
     </div>
 
     <footer>
-        <p>Data Source: OECD Air Emissions Accounts (2024)</p>
+        <p>Data Source: OECD Air Emissions Accounts (2024)
+            <a href="https://data-explorer.oecd.org/vis?df[ds]=DisseminateFinalDMZ&df[id]=DSD_AIR_GHG@DF_AIR_GHG&df[ag]=OECD.ENV.EPI">here</a>
+        </p>
     </footer>
 </div>
 
