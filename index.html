@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMSC471: White Hat / Black Hat Visualization</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 1100px; margin: 0 auto; padding: 40px; color: #333; background-color: #f9f9f9; }
+        .container { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #2980b9; margin-top: 40px; }
+        .viz-section { margin-bottom: 60px; }
+        .write-up { background: #f4f7f6; padding: 20px; border-left: 5px solid #3498db; border-radius: 4px; margin-top: 20px; }
+        .dev-process { font-style: italic; color: #666; font-size: 0.9em; margin-top: 40px; }
+        footer { text-align: center; margin-top: 50px; color: #bdc3c7; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Assignment 2: White Hat / Black Hat Visualization</h1>
+    <p style="text-align: center;"><strong>Students:</strong> Jiho Lee, John Li | <strong>Course:</strong> CMSC471 (Spring 2026)</p>
+
+    <hr>
+
+    <div class="viz-section">
+        <h2>1. White Hat Visualization: G7 Emissions Index (2014–2023)</h2>
+        
+        <div id="white-hat-viz">
+            <div class='tableauPlaceholder' id='viz1776032629894' style='position: relative'>
+                <noscript>
+                    <a href='#'><img alt='White Hat Visualization: G7 Emission Trends ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CM&#47;CMSC471A2WhiteHat_17760324568380&#47;WhiteHatVisualizationG7EmissionTrends&#47;1_rss.png' style='border: none' /></a>
+                </noscript>
+                <object class='tableauViz'  style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                    <param name='embed_code_version' value='3' /> 
+                    <param name='site_root' value='' />
+                    <param name='name' value='CMSC471A2WhiteHat_17760324568380&#47;WhiteHatVisualizationG7EmissionTrends' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CM&#47;CMSC471A2WhiteHat_17760324568380&#47;WhiteHatVisualizationG7EmissionTrends&#47;1.png' /> 
+                    <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' /><param name='language' value='en-US' />
+                </object>
+            </div>                
+            <script type='text/javascript'>                    
+                var divElement = document.getElementById('viz1776032629894');                    
+                var vizElement = divElement.getElementsByTagName('object')[0];                    
+                if ( divElement.offsetWidth > 800 ) { 
+                    vizElement.style.width='1000px';
+                    vizElement.style.height='827px';
+                } else if ( divElement.offsetWidth > 500 ) { 
+                    vizElement.style.width='1000px';
+                    vizElement.style.height='827px';
+                } else { 
+                    vizElement.style.width='100%';
+                    vizElement.style.height='727px';
+                }                     
+                var scriptElement = document.createElement('script');                    
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+            </script>
+        </div>
+
+        <div class="write-up">
+            <h3>White Hat Write-up</h3>
+            <p>This visualization utilizes the OECD Greenhouse Gas Emissions Inventories dataset, specifically tracking total emissions (excluding Land Use, Land-Use Change, and Forestry) measured in kilogrammes of CO2-equivalent per person. The analysis focuses on a ten-year window from 2014 to 2023. A per-capita metric was selected because it provides a more equitable comparison of a nation's carbon intensity relative to its population size, rather than simply measuring total mass, which is often biased toward larger countries.</p>
+            
+            <p>To ensure the visualization is read and understood effortlessly, the dataset was filtered to include only the G7 (Group of Seven) nations. This represents a transparent, non-arbitrary grouping of advanced economies, which avoids the confusion caused by including all 95 entities present in the raw data. A line chart was used as the most effective mark for showing temporal trends, with a manually assigned high-contrast color palette to ensure that geographically similar nations, such as Canada and the United States, are instantly distinguishable. Furthermore, a horizontal reference line was placed at the 100-index level to provide a vital visual anchor, allowing the reader to instantly see which nations have successfully lowered their emissions relative to the start of the decade.</p>
+            
+            <p>To meet the requirement for advanced transformations, a Base-Year Indexing calculation was applied: <strong>(Current Year Value / 2014 Value) * 100</strong>. By setting 2014 as the "100" baseline for every nation, the visualization focuses on the relative rate of change. This transformation is fundamentally more honest for a general audience; it prevents the sheer volume of larger economies from visually overwhelming the significant percentage reductions made by smaller nations, allowing for a direct comparison of how effectively each nation is reducing its carbon footprint over time. All titles and labels have been customized to describe and contextualize the visualization accurately, ensuring transparency for the viewer.</p>
+        </div>
+    </div>
+
+    <div class="viz-section">
+        <h2>2. Black Hat Visualization: [Title Pending]</h2>
+        <div style="height: 400px; background: #eee; border: 2px dashed #ccc; display: flex; align-items: center; justify-content: center;">
+            <p>Partner's Black Hat Dashboard will be embedded here.</p>
+        </div>
+        <div class="write-up" style="border-left-color: #e74c3c;">
+            <h3>Black Hat Write-up</h3>
+            <p>Partner's write-up will be placed here once complete.</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="dev-process">
+        <h3>AI Usage and Development Process</h3>
+        <p><strong>AI Usage:</strong> Gemini was used as a collaborative design partner to brainstorm ethical visualization strategies, select the G7 peer-group for clarity, and refine the indexing formula for mathematical accuracy.</p>
+        <p><strong>Development Process:</strong> I (John Li) was responsible for the White Hat visualization, including data selection, Tableau implementation, and the ethical justification write-up. My partner is developing the Black Hat version. Approximately 5–6 hours were spent on the White Hat portion. The most significant challenge was balancing the dataset scope to avoid "spaghetti plots" while maintaining a fair, peer-based comparison.</p>
+    </div>
+
+    <footer>
+        <p>Data Source: OECD Air Emissions Accounts (2024)</p>
+    </footer>
+</div>
+
+</body>
+</html>
